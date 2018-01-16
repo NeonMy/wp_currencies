@@ -3,15 +3,13 @@
 
     <div>
         <br>
-        <span style="font-size: 24px; font-weight: bold; margin-right: 380px">
+        <span style="font-size: 24px; font-weight: bold; margin-right: 80px">
             <?php echo __('Currencies list', 'wp_currencies'); ?>
         </span>
-        <a href="/wp-admin/admin.php?page=plugin-wp_currencies"><?php echo __('Create', 'wp_currencies'); ?></a>
+        <a href="/wp-admin/admin.php?page=plugin-wp_currencies-create"><?php echo __('Create', 'wp_currencies'); ?></a>
     </div>
+    <br>
 
-    <div>
-
-    </div>
     <?php if (count($result) > 0): ?>
         <table class="wp-list-table widefat fixed striped tags">
             <thead>

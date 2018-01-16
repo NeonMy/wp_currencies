@@ -9,7 +9,7 @@
                     <?php echo __('Create currency', 'wp_currencies'); ?>
                 <?php endif; ?>
             </span>
-            <a href="/wp-admin/admin.php?page=plugin-wp_currencies">Назад</a>
+            <a href="/wp-admin/admin.php?page=plugin-wp_currencies"><?php echo __('Back', 'wp_currencies'); ?></a>
         </div>
 
     <?php if ($error): ?>
