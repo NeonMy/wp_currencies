@@ -69,12 +69,16 @@ class CurrencyPlugin {
                  " ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
         
         \Currency\CurrencyPlugin::incAndUpd($sql);
+        
+        flush_rewrite_rules();
+        
 	}
 
 	/**
 	 * Fired when the plugin is deactivated
 	 */
 	public function deactivate() {
+        flush_rewrite_rules();
 	}
 
 	/**
@@ -83,6 +87,8 @@ class CurrencyPlugin {
 	public static function uninstall() {
         $sql = "DROP TABLE " . \Currency\CurrencyPlugin::$table . ";";
         \Currency\CurrencyPlugin::incAndUpd($sql);
+        
+        
 	}
     
     public static function incAndUpd($sql = '') {
